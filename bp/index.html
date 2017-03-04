@@ -38,10 +38,8 @@
       <div class="section section-gray section-clients">
         <div class="container text-center">
           <h4 class="header-text">Meaninful data at the moment it is most relevant</h4>
-          <p>Monitoring must give you valuable, timely and relevant information, not just be a burden and whine so frequently that it ends up being like the “boy who cried wolf”.</p>
-          <p>We can help you implement “smart” monitoring strategies were the on-call engineer from the appropriate team gets a single aggregated message with valuable insight like: <b>“25 servers are failing because the v_X storage volume is offline in the west datacenter, this will impact the X business service within 2HRS, talk to Y manager to arrange for a fix and check ticket 123 for troubleshooting instructions”.</b></p>
-          <p>The side benefit? Well, you get automated infrastructure documentation.</p>
-          <p>There is no need to buy new expensive tools, you already have all the tools and information you need, it is usually just a matter of building some automation pipelines, integrating existing APIs and writing a bit of code to "map" the relationships of IT infrastructure in a single "graph database", and then modifying your DevOps/Monitoring/CI/CD workflows to leverage this information to provide "insight".</p><br>
+          <p>Monitoring must give you valuable, timely and relevant information, not just be a burden and whine so frequently that it ends up being like the “boy who cried wolf”. We can help you implement “smart” monitoring strategies were the on-call engineer from the appropriate team gets a single aggregated message with valuable insight like: <b>“25 servers are failing because the v_X storage volume is offline, this will impact the X business service within 2HRS, talk to Y manager to arrange for a fix and check ticket 123 for troubleshooting instructions”.</b></p>
+          <p>The side benefit? Well, you get automated infrastructure documentation in an open format that is easy to use, all in one place, including an "exploration"/"visualization" dashboard, a RESTful API and an advanced query-building console to create all sorts of dynamic reports.</p><br>
           <div class="logos">
             <ul class="list-unstyled">
               <li ><img src="../assets/img/components/active-directory.png"/></li>
@@ -67,7 +65,8 @@
             <div class="col-md-5 hidden-xs">
               <div class="description">
                 <h4 class="header-text">It's beautiful</h4>
-                <p>Forget about outdated spreadsheets, horrible tables inside powerpoint presentations and network diagrams that are too difficult to keep updated, this is a beautiful, self-documenting way to present your infrastructure data that even your non-tech users will love.</p>
+                <p>From our experience, small to mid-sized organizations have anywhere between 50,000 and 250,000 "things" they manage (servers, routers, IP networks, DNS/DHCP, load-balancers, organization chart, ACL's, etc.)</p>
+                <p>Forget about documenting all of that using different systems with disparate data formats, spreadsheet files attached to documents in places you keep forgetting about, horrible tables inside powerpoint presentations and network diagrams that are imposible to keep up-to-date automatically, this is really a beautiful, automated, self-documenting way to present and share your infrastructure data, your non-tech users will understand what you do, your managers will be thrilled, and your NOC will put you in the "hero" category.</p>
               </div>
             </div>
             <div class="col-md-6 ">
@@ -87,9 +86,22 @@
             <div class="col-md-5 col-md-offset-1">
               <h4 class="header-text">All your data</h4>
               <p>A true full-stack view of your systems, data and stakeholders in a single place (in a open format that is easy to use from other systems).</p>
-              <p>This sounds like a lot of work, and it is, but you already did it, it's all within your various monitoring, orchestration, and documentation repositories, you have the foundation, together we can build something impressive from there.</p>
-            </div>
+              <p>You will be able to answer complex questions in seconds:</p>
+              <ul>
+                <li>How many CentOS 7 servers that were installed during the last month are not configured for backups?</li>
+                <li>Which Windows virtual servers are not a dependency to a service exposed to the internet through Akamai?</li>
+                <li>How much memory do I need to provision to make a copy of my production environment?</li>
+                <li>How many public services are not balanced through at least 3 data centers?</li>
+                <li>What services are talking to another service in a different region?</li>
+              </ul>
           </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container text-center">
+          <p>This sounds like a lot of work, and it is, but you already did most of it, it's all within your various monitoring, orchestration, provisioning, and documentation systems, you have the foundation, together we can build something impressive from there.</p>
+          <p>Did we mention there is no need to buy new expensive tools?, you already have all the tools and information you need, it is usually just a matter of building some automation pipelines, integrating existing APIs and writing a bit of code to "map" the relationships of your IT infrastructure in a single "graph database", and then modifying your Documentation/DevOps/Monitoring/CI/CD workflows to leverage this information to provide "insight".</p>
+          <br>
         </div>
       </div>
       <!-- <div class="section section-testimonial">
