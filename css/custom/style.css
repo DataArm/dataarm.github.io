@@ -1938,6 +1938,7 @@ header{
 }
 #feature{
   background-color: #000 !important;
+  padding-top: 25px;
 }
 .home_area{
   padding-bottom: 100px !important;
@@ -1952,8 +1953,13 @@ header{
 .video_area:before{
   background-image: url(../../img/HOME.png);
 }
+#product{
+  padding-top: 25px;
+}
 #product2{
   background-color: #333 !important;
+  padding-top: 0px;
+  padding-bottom: 25px;
 }
 .cta_area .cta h1 {
     margin: 65px 0 35px;
@@ -2154,9 +2160,13 @@ hr {
 }
 }
 .home_area {
-    padding-top: 100px;
-  }
-  body p{font-weight: 100 !important;}
-  .home_area .home_content .h3{
-    font-weight: 100 !important;
-  }
+  padding-top: 100px;
+}
+body p{font-weight: 100 !important;}
+.home_area .home_content .h3{
+  font-weight: 100 !important;
+}
+#footer .footer_top{
+  padding-bottom: 15px;
+  padding-top: 15px;
+}

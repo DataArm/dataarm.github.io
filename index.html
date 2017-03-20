@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DA | DataArm</title>
      <meta name="description" content="IT consultancy and data insight service using graph theory to describe the interconnections between IT systems in a way that can be used to understand how all the moving pieces interact with each other, and when something fails, quickly identify the overall impact." />
-    <meta name="keywords" content="connected data, insight, big data, graph theory, graph database, monitoring, potential impact, ownership"/>
+    <meta name="keywords" content="connected data, insight, relationships, graph theory, graph database, monitoring, potential impact, ownership"/>
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
@@ -61,10 +61,10 @@
                   <div class="col-md-9 col-xs-2">
                     <nav>
                       <ul class="menu hidden-xs hidden-sm">
-                        <li class="current-menu-item"><a href="#welcome">Insight now!</a></li>
+                        <li class="current-menu-item"><a href="#welcome">A different era</a></li>
                         <li><a href="#feature">Timely information</a></li>
-                        <li><a href="#complexity">Manage complexity</a></li>
-                        <li><a href="#fact">You did most of the work</a></li>
+                        <li><a href="#complexity">Complexity increased</a></li>
+                        <li><a href="#fact">Almost there</a></li>
                         <li><a href="#cta">Get Started</a></li>
                       </ul>
                     </nav>
@@ -77,14 +77,12 @@
                     <div class="row">
                         <div class="col-md-6 home_col">
                            <div class="home_content animated a_fl">
-                              <div class="h1">Insight Now!</div>
+                              <div class="h1">We live in a different era</div>
                               <div class="h3">
                                 <ul>
-                                  <li>IT infrastructure changed, how long until you are finished updating your Visio/Lucidchart diagrams and inventory?</li>
-                                  <li>A "disk running out of space" alert is triggered, how soon can your "new engineer" find out where is the server and what are the impacted services and their stakeholders?</li>
-                                  <li>Software or hardware needs to be replaced, how fast will your non-tech manager generate the list of connected services to plan for the "maintenance window"?</li>
+                                  <li>The IT world is changing drastically, DevOps/Agile is shifting our focus to continuous integration, rapid deployments, automation, cloud, IoT, IaaS, PaaS, SaaS, containers, etc.</li>
+                                  <li>This is a good thing, but somehow it feels that you are now forced to manage an ever growing, more complex number of services, platforms, and technologies, while simultaneously expected to be faster than ever without letting go off legacy systems.</li>
                                 </ul>
-                                If the answer is not "less than 1 minute", read on!
                               </div>
                               <div class="home_btn">
                                   <a href="#feature" data-scroll class="home_btn default-btn hvr-shutter-out-horizontal">Timely information <i class="fa fa-arrow-right"></i></a>
@@ -129,16 +127,20 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section_title animated a_fu">
-                            <div class="h1">Meaningful data at the moment you need it most</div>
+                            <div class="h1">You work faster and more efficiently, but</div>
                         </div>
                     </div>
                 </div>
                 <div class="row features">
                     <div class="col-md-4">
-                        <div class="feature_dsc animated a_fu">
-                            <div class="feature_txt">
-                                <p>Monitoring must give you valuable, timely and relevant information, not just be a burden and whine so frequently that it ends up being like the “boy who cried wolf”.</p>
-                                <p>The on-call engineer from the appropriate team should get a single aggregated message with valuable insight like: “25 servers are failing because the v_X storage volume is offline, this will impact the X business service within 2HRS, talk to Y manager to arrange for a fix and check ticket 123 for troubleshooting instructions”.</p>
+                        <div class="single_feature">
+                            <div class="sf_inner">
+                              <h4>You feel the pain when documentation and configurations starts to lag behind:</h4>
+                              <ul>
+                                <li>IT infrastructure changes constantly, how up-to-date are those monitoring configurations, inventory reports and network diagrams?</li>
+                                <li>When a monitoring alert is triggered, how long does it take to find out where is the server, which are the impacted services and their stakeholders?</li>
+                                <li>Software and hardware need to be replaced much more frequently, how fast can your staff generate the list of connected services to be certain of the dependencies when planning for a "maintenance window"?</li>
+                              </ul>
                             </div>
                         </div>
                     </div>
@@ -150,9 +152,12 @@
                     <div class="col-md-4 animated a_fu">
                         <div class="single_feature">
                             <div class="sf_inner">
-                                <h4>The side benefit?</h4>
-                                <p>Well, you get automated infrastructure documentation in an open format that is easy to use, all in one place, including an "exploration"/"visualization" dashboard, a RESTful API and an advanced query-building console to create all sorts of dynamic reports.</p>
-                                <a href="#complexity" data-scroll class="read_me">Manage complexity <i class="fa fa-arrow-right"></i></a><br>
+                              <p>You need valuable, timely, accurate and relevant information, it used to be as simple as picking up a couple of ITSM tools, it is not enough anymore:</p>
+                              <ul>
+                                <li>The on-call engineer needs a single, timely, aggregated message with valuable insight like: “25 servers are failing because the v_X storage volume is offline, this will impact the X business service within 2HRS, talk to Y manager to arrange for a fix and check ticket 123 for troubleshooting instructions”</li>
+                                <li>You can't afford the significant amount of time wasted trying to find where to start looking for the root cause, at the most critical moment.</li>
+                              </ul>
+                                <a href="#complexity" data-scroll class="read_me">Complexity increased <i class="fa fa-arrow-right"></i></a><br>
                             </div>
                         </div>
                     </div>
@@ -166,10 +171,10 @@
                 <div class="row">
                     <div class="col-md-5 col-md-offset-7">
                         <div class="vdo_dsc">
-                            <div class="h1 animated a_fu">Effortlessly manage complexity</div>
-                            <p class="animated a_fu">From our experience, you and your team have anywhere between <b>50,000 and 250,000 "things" to manage</b> (servers, routers, IP networks, DNS/DHCP/IPAM, load-balancers, organization charts, ACL's, appliances, vendors, data centers, clusters, containers, cloud providers, etc.)<br>
-                            Forget about documenting all of that using different systems with disparate data formats, spreadsheet files sent over email, horrible tables inside powerpoint presentations and network diagrams that are impossible to keep up-to-date automatically. </p>
-                            <a href="#product" data-scroll class="read_me">Beautiful solution <i class="fa fa-arrow-right"></i></a><br>
+                            <div class="h1 animated a_fu">Complexity exploded</div>
+                            <p class="animated a_fu">From our experience, you and your team have now anywhere between <b>50,000 and 250,000 "things" to manage:</b> servers, virtualization platforms, storage, routers, IP networks, DNS/DHCP, load-balancers, organization charts, ACL's, appliances, vendors, data centers, racks, clusters, containers, cloud providers, environments, etc.<br>
+                            Forget about documenting all of that using legacy systems with disparate data formats built for the static, slow changing IT world of the nineties.<br>
+                            <a href="#product" data-scroll class="read_me">You know there must be a better way <i class="fa fa-arrow-right"></i></a></p>
                         </div>
                     </div>
                 </div>
@@ -177,23 +182,36 @@
         </div>
 
         <div class="product_area sp100" id="product">
-            <div class="container">
-                <div class="row left_dsc">
-                    <div class="col-md-6 product_col">
-                        <div class="product_img relative">
-                            <img class=" animated a_fl" src="img/home3.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-6 product_col">
-                        <div class="product_dsc animated a_fr">
-                            <div class="h1">Simply beautiful</div>
-                            <p>This is really a beautiful (both technically and aesthetically), automated, self-documenting way to present and share your infrastructure data.</p>
-                            <p>Your non-tech users will understand what you do, your managers will be thrilled, and your NOC will put you in the "hero" category.</p>
-                            <a href="#product2" data-scroll class="home_btn default-btn hvr-shutter-out-horizontal">One-stop for all your data &nbsp;<i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
+          <div class="container">
+            <div class="row left_dsc">
+              <div class="col-md-6 product_col">
+                <div class="product_img relative">
+                  <img class=" animated a_fl" src="img/home3.png" alt="">
                 </div>
+              </div>
+              <div class="col-md-6 product_col">
+                <div class="product_dsc animated a_fr">
+                  <div class="h1">A better way</div>
+                  <p>Just as the way you deliver results has shifted tremendously in the last 5 years, the way you document, inventory, monitor and share information about your IT services and infrastructure needs to evolve, or risk becoming obsolete.</p>
+                  <p>You need a modern, automated, relationship-aware, self-documenting way to present, share and interact with your infrastructure information.</p>
+                  <a href="#product2" data-scroll class="home_btn default-btn hvr-shutter-out-horizontal">A solution that puts you back in the map &nbsp;<i class="fa fa-arrow-right"></i></a>
+                </div>
+              </div>
             </div>
+            <br>
+            <div class="container">
+              <div class="testimonial row">
+                <div class="single_tst col-md-12">
+                  <p>"As an I&O professional, you must be an enabler — embracing agile deployment models that include cloud, containers and micro services, <b>managing an explosion of data</b>, and achieving ever-rising service levels..."</p>
+                  <div class="tst_author">
+                    <div class="cdtb">
+                      <span class="cdt">Infrastructure and Operations Leadership Vision for 2017, Gartner.com</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="product_area sp100" id="product2">
             <div class="container">
@@ -206,9 +224,7 @@
                     <div class="col-md-6 product_col">
                         <div class="product_dsc animated a_fu">
                             <div class="h1">All in one place</div>
-                            <p>A true full-stack view of your systems and stakeholders in a single place (in an open format). </p>
-                            <h3>You will be able to answer complex questions in seconds:</h3>
-
+                            <p>You need a true full-stack view of your systems and stakeholders in a single place, <b>because you need to answer complex questions much faster:</b></p>
                             <ul class="no-list">
                               <div class="single_feature">
                               <div class="sf_inner">
@@ -230,11 +246,11 @@
                                   <hr>
                               <div class="single_feature">
                               <div class="sf_inner">
-                                  <li>What services are talking to another service in a different region?</li>
+                                  <li>What services are talking to another instance in a different region?</li>
                               </div>
                               </div>
                             </ul>
-                            <a href="#fact" data-scroll class="home_btn default-btn hvr-shutter-out-horizontal">You already did most of the work &nbsp;<i class="fa fa-arrow-right"></i></a>
+                            <a href="#fact" data-scroll class="home_btn default-btn hvr-shutter-out-horizontal">You are almost there &nbsp;<i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -247,9 +263,9 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <div class="cta text-center">
-                                <h1 class="animated a_fu" data-delay=".2s">Yes, you already did most of the work</h1>
-                                <p>It is within your various monitoring, orchestration, inventory, provisioning, ITSM, and documentation systems (and most of your vendors already offer a free API or ETL mechanism).
-                                <br>You have the foundation, together we can build something impressive that will take away the uncertainty and the frustration of feeling you are playing "catch up" with your documentation efforts.</p>
+                                <h1 class="animated a_fu" data-delay=".2s">You already did most of the work</h1>
+                                <p>It is within your various monitoring, orchestration, inventory, provisioning, ITSM, and documentation systems (and most vendors already offer an API or ETL mechanism).
+                                <br>You have the foundation, together we can build something impressive that will take away the uncertainty and the frustration of feeling you are playing "catch up" with your efforts.</p>
 
                                 <div class="cta_btn animated a_fu" data-delay=".4s">
                                   <a href="#cta" class="default-btn hvr-shutter-out-horizontal">Sounds, good? &nbsp;<i class="fa fa-download"></i></a>
@@ -267,8 +283,8 @@
                 <div class="row">
                   <div class="col-md-4 counter_col clearfix">
                       <div class="fun_content">
-                          <div class="h3">There is no need to buy yet another expensive tool</div>
-                          <p>You already have all the tools and information you need, what is missing is a solution that integrates all the APIs and automates a workflow so you can start leveraging "insight" from them.</p>
+                          <div class="h3">There is no need for yet another complex tool that will lock you in</div>
+                          <p>You already have all the tools and information you need, what is missing is a solution that integrates all the APIs in an open format and automates a workflow so you can start leveraging "insight" and enable great things to happen.</p>
                       </div>
                   </div>
                   <div class="col-md-8 counter_col clearfix">
@@ -284,7 +300,38 @@
                 </div>
             </div>
         </div>
-        <br><br><br>
+        <br>
+        <div class="testimonial_area animated a_fu" id="testimonial">
+            <div class="container">
+              <div class="testimonial row">
+                <div class="single_tst col-md-4">
+                  <p>"...you can correlate your network, data center and IT assets to help with troubleshooting, impact analysis and capacity or outage planning"</p>
+                  <div class="tst_author">
+                      <div class="cdtb">
+                          <h5><a href="https://neo4j.com/use-cases/network-and-it-operations/">Neo4j</a></h5>
+                      </div>
+                  </div>
+                </div>
+                <div class="single_tst col-md-4">
+                  <p>"... Graph databases are a powerful optimized technology that link billions of pieces of connected data to help create new sources of value for customers and increase operational agility... "</p>
+                  <div class="tst_author">
+                      <div class="cdtb">
+                          <h5><a href="https://www.forrester.com/report/Market+Overview+Graph+Databases/-/E-RES121473">Forrester research</a></h5>
+                      </div>
+                  </div>
+                </div>
+                <div class="single_tst col-md-4">
+                  <p>“graph analysis is possibly the single most effective competitive differentiator for organizations pursuing data-driven operations and decisions.”</p>
+                  <div class="tst_author">
+                      <div class="cdtb">
+                          <h5><a href="https://www.gartner.com/doc/2852717/it-market-clock-database-management">Gartner</a></h5>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <br>
         <div class="cta_2 animated a_fu" id="cta">
           <div class="container">
               <div class="row">
@@ -302,7 +349,6 @@
 
         <footer class="footer animated a_fu" id="footer">
           <div class="footer_top sp100">
-            <br><br><br>
             <div class="container">
               <div class="row">
                 <div class="col-sm-3 col-xs-12">
@@ -310,7 +356,7 @@
                     <div class="wid_title h4">Talk business with us:</div>
                     <ul>
                       <li><a href="mailto:contact@dataarm.com"><i class="fa fa-envelope"></i>contact@dataarm.com</a></li>
-                      <li><a href="https://www.linkedin.com/company/dataarm"><i class="fa fa-linkedin"></i>linkedin.com/company/dataarm</a></li>
+                      <li><a href="https://www.linkedin.com/company/dataarm"><i class="fa fa-linkedin"></i>linkedin.com</a></li>
                     </ul>
                   </div>
                 </div>
@@ -318,10 +364,10 @@
                   <div class="widget widget_link">
                     <div class="wid_title h4">Menu</div>
                     <ul>
-                      <li><a href="#welcome" data-scroll>Insight now!</a></li>
+                      <li><a href="#welcome" data-scroll>A different era</a></li>
                       <li><a href="#feature" data-scroll>Timely information</a></li>
-                      <li><a href="#complexity" data-scroll>Manage complexity</a></li>
-                      <li><a href="#fact" data-scroll>You did most of the work</a></li>
+                      <li><a href="#complexity" data-scroll>Complexity increased</a></li>
+                      <li><a href="#fact" data-scroll>Almost there</a></li>
                     </ul>
                   </div>
                 </div>
