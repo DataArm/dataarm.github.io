@@ -1938,7 +1938,6 @@ header{
 }
 #feature{
   background-color: #000 !important;
-  padding-top: 25px;
 }
 .home_area{
   padding-bottom: 100px !important;
@@ -1953,13 +1952,9 @@ header{
 .video_area:before{
   background-image: url(../../img/HOME.png);
 }
-#product{
-  padding-top: 25px;
-}
 #product2{
   background-color: #333 !important;
-  padding-top: 0px;
-  padding-bottom: 25px;
+  padding-top: 15px;
 }
 .cta_area .cta h1 {
     margin: 65px 0 35px;
