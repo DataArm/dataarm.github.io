@@ -605,7 +605,7 @@ body {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 26px; }
 
@@ -1524,18 +1524,18 @@ header ul.menu > li > a {
     content: '';
     width: 100%;
     background-color: #ffffff;
-    right: 50%;
+    left: 50%;
     top: 0;
     height: 100%;
-    margin-right: 150px;
+    margin-left: 150px;
     opacity: .08; }
   @media only screen and (min-width: 0px) and (max-width: 991px) {
     .funfact_area .counter_col > div,
     .funfact_area .fun_content {
       text-align: center; } }
   .funfact_area .single_fact {
-    float: right;
-    width: 35%;
+    float: left;
+    width: 25%;
     font-weight: 400; }
     .funfact_area .single_fact .h1 {
       font-size: 40px;
@@ -1780,7 +1780,7 @@ header ul.menu > li > a {
         margin: 30px 0 0;
         text-align: center; } }
     .cta_2 .cta_btn .default-btn {
-      background-color: #69A422;
+      background-color: #ffffff;
       padding: 0 50px; }
       .cta_2 .cta_btn .default-btn:before {
         background-color: #f7f7f7; }
@@ -1947,14 +1947,13 @@ header{
   transition: all .2s ease;
 }
 .read_me:hover{
-  text-decoration: underline !important;
+  color: #0066a6 !important;
 }
 .video_area:before{
   background-image: url(../../img/HOME.png);
 }
 #product2{
   background-color: #333 !important;
-  padding-top: 15px;
 }
 .cta_area .cta h1 {
     margin: 65px 0 35px;
@@ -2155,13 +2154,9 @@ hr {
 }
 }
 .home_area {
-  padding-top: 100px;
-}
-body p{font-weight: 100 !important;}
-.home_area .home_content .h3{
-  font-weight: 100 !important;
-}
-#footer .footer_top{
-  padding-bottom: 15px;
-  padding-top: 15px;
-}
+    padding-top: 100px;
+  }
+  body p{font-weight: 100 !important;}
+  .home_area .home_content .h3{
+    font-weight: 100 !important;
+  }
