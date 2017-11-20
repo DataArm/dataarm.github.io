@@ -1,0 +1,39 @@
+/*Scroll down over white*/
+a.scroll-black-arrow {
+  color: black;
+  border: 1px solid black;
+}
+a.scroll-black-arrow i:hover, a.scroll-black-arrow i:focus {
+  color: black;
+}
+
+/*Old time*/
+.old {
+  text-decoration: line-through;
+}
+
+/*Show title of use cases*/
+p.add-animation {
+  opacity: 0.75;
+}
+
+.section-with-hover .project .over-area {
+  opacity: 0.75;
+}
+
+.section-with-hover .project .content {
+  opacity: 0.75;
+}
+
+.section-with-hover .project h1 {
+  opacity: 0.75;
+}
+
+.section-with-hover .project .over-area:hover .content h1 {
+  opacity: 1;
+}
+
+/*Video section header*/
+.project-content > div .project-details .project-title {
+  margin: 0 auto 25px;
+}
