@@ -36,7 +36,7 @@ var short_questions = [
   {"<h2>What's the impact of this problem?</h2>": "<h5>even if you're the store manager</h5>"},
   {"<h2>Who's listening on port 8080?</h2>": "<h5>even if you're the QA engineer</h5>"},
   {"<h2>What container does that URL go to?</h2>": "<h5>even if you can't tell Docker from Kubernetes</h5>"},
-  {"<h2>Where's Postfix's MTA running?</h2>": "<h5>even if you're the ActiveDirectory manager</h5>"},
+  {"<h2>Where's Postfix's MTA running?</h2>": "<h5>even if you're the ActiveDirectory admin</h5>"},
   {"<h2>Which users are members of this AD group?</h2>": "<h5>even if you're the Linux engineer</h5>"},
   {"<h2>What AD groups do we have?</h2>": "<h5>even if you're the Java developer</h5>"},
   {"<h2>What users have SUDO rights?</h2>": "<h5>even if you're the .Net developer</h5>"},
@@ -67,11 +67,11 @@ var tech_phrases = [
   "Data centers, server racks, service tags and HW replacements",
   "Clusters and replication configurations for all kinds of services",
   "Backups, templates, restore operations",
-  "Containers and orchestration for all kinds of engines (Kubernetes, Docker, DigitalOcean, etc.)",
+  "Containers and orchestration of all kinds (Kubernetes, Docker, DigitalOcean, etc.)",
   "Multiple cloud providers (AWS, Azure, Google, Alibaba, etc.)",
   "Development and QA environments for multiple, constantly-changing teams and projects",
   "CI/CD pipelines (Jenkins, GoCD, Bamboo, GitLab CI, etc.)",
-  "Configuration and change management (ITIL, ITSM tools, Puppet, Ansible, Chef, Salt, etc.)",
+  "Configuration / change management (ITIL, ITSM, Puppet, Ansible, Chef, Salt, etc.)",
   "Inventory and monitoring tools (automation, aggregation and impact analysis)",
   "Complex microservices-bases systems (low network latency, complex dependencies, etc.)",
   "New, more complex build environments (NPM, YUM, CDNs, images, registries, etc.)",
@@ -80,6 +80,20 @@ var tech_phrases = [
   "Security scanning, patching and vulnerability assesments",
   "IoT devices, mobile handhelds, apps and tablets",
   "VPNs, SSO integrations, multi-factor authentication and hundreds of credentials"
+]
+
+var some_paradigms = [
+  'SaaS',
+  'Internet of Things (IoT)',
+  'DevOps culture',
+  'NoOps',
+  'Agile movement',
+  'DevSecOps',
+  'DevTestOps',
+  'InfraCode',
+  'IaaS',
+  'PaaS',
+  'Subscription-based economy'
 ]
 
 function shuffle(array) {
@@ -118,11 +132,24 @@ function change_tech() {
   tindex += 1
 }
 
+var paradigms = shuffle(some_paradigms)
+var pindex = 0
+function change_paradigm() {
+  if (pindex == paradigms.length) { pindex = 0 }
+  $('#paradigm').fadeOut(500, function() {
+    $(this).html(paradigms[pindex]).fadeIn(500)
+  })
+  pindex += 1
+}
+
 $(document).ready(function(){
   $(function () {
     setInterval(change_question, 6500)
   })
   $(function () {
     setInterval(change_tech, 7500)
+  })
+  $(function () {
+    setInterval(change_paradigm, 4000)
   })
 })
