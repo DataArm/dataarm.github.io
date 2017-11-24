@@ -119,7 +119,7 @@ $(document).ready(function(){
     $('#thing').fadeOut(500, function() {
       $(this).html(Object.keys(thing)[0]).fadeIn(500)
     })
-    $('#role').delay(750).fadeOut(500, function() {
+    $('#role').fadeOut(500, function() {
       $(this).html(thing[Object.keys(thing)[0]]).fadeIn(500)
     })
     qindex += 1
@@ -146,12 +146,12 @@ $(document).ready(function(){
   }
 
   $(function () {
-    setInterval(change_question, 6500)
+    setInterval(change_question, 7500)
   })
   $(function () {
     setInterval(change_tech, 7500)
   })
   $(function () {
-    setInterval(change_paradigm, 4000)
+    setInterval(change_paradigm, 5000)
   })
 })
