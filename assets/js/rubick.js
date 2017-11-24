@@ -337,7 +337,6 @@ rubik = {
     }, 6),
 
     showModal: function(button){
-        return;
         var id = $(button).data('target');
         var $project = $(button).closest('.project');
 

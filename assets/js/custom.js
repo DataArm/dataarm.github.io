@@ -110,41 +110,41 @@ function shuffle(array) {
   return array
 }
 
-var questions = shuffle(short_questions)
-var qindex = 0
-function change_question() {
-  if (qindex == questions.length) { qindex = 0 }
-  var thing = questions[qindex]
-  $('#thing').fadeOut(500, function() {
-    $(this).html(Object.keys(thing)[0]).fadeIn(500)
-  })
-  $('#role').delay(750).fadeOut(500, function() {
-    $(this).html(thing[Object.keys(thing)[0]]).fadeIn(500)
-  })
-  qindex += 1
-}
-
-var techs = shuffle(tech_phrases)
-var tindex = 0
-function change_tech() {
-  if (tindex == techs.length) { tindex = 0 }
-  $('#tech').fadeOut(500, function() {
-    $(this).html(techs[tindex]).fadeIn(500)
-  })
-  tindex += 1
-}
-
-var paradigms = shuffle(some_paradigms)
-var pindex = 0
-function change_paradigm() {
-  if (pindex == paradigms.length) { pindex = 0 }
-  $('#paradigm').fadeOut(500, function() {
-    $(this).html(paradigms[pindex]).fadeIn(500)
-  })
-  pindex += 1
-}
-
 $(document).ready(function(){
+  var questions = shuffle(short_questions)
+  var qindex = 0
+  function change_question() {
+    if (qindex == questions.length) { qindex = 0 }
+    var thing = questions[qindex]
+    $('#thing').fadeOut(500, function() {
+      $(this).html(Object.keys(thing)[0]).fadeIn(500)
+    })
+    $('#role').delay(750).fadeOut(500, function() {
+      $(this).html(thing[Object.keys(thing)[0]]).fadeIn(500)
+    })
+    qindex += 1
+  }
+
+  var techs = shuffle(tech_phrases)
+  var tindex = 0
+  function change_tech() {
+    if (tindex == techs.length) { tindex = 0 }
+    $('#tech').fadeOut(500, function() {
+      $(this).html(techs[tindex]).fadeIn(500)
+    })
+    tindex += 1
+  }
+
+  var paradigms = shuffle(some_paradigms)
+  var pindex = 0
+  function change_paradigm() {
+    if (pindex == paradigms.length) { pindex = 0 }
+    $('#paradigm').fadeOut(500, function() {
+      $(this).html(paradigms[pindex]).fadeIn(500)
+    })
+    pindex += 1
+  }
+
   $(function () {
     setInterval(change_question, 6500)
   })
