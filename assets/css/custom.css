@@ -37,3 +37,13 @@ p.add-animation {
 .project-content > div .project-details .project-title {
   margin: 0 auto 25px;
 }
+
+a {
+  color: #E3C4A0;
+}
+p>a {
+  font-size: 1.143em;
+}
+li>a {
+  font-size: 1.143em;
+}
