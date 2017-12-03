@@ -53,7 +53,7 @@
 <body id="skrollr-body">
 <div class="loading ">
   <div class="loading-container">
-    <p>Document everything about your IT infrastructure in under 15 seconds...</p>
+    <p>Create any report about your IT infrastructure in under 15 seconds...</p>
     <img class="loader" src="assets/img/rubik.svg"/>
   </div>
 </div>
@@ -83,12 +83,12 @@
           </a>
         </li>
         <li>
-          <a href="" data-scroll="true">
+          <a href="docs.html" data-scroll="true">
             Docs
           </a>
         </li>
         <li>
-          <a href="why.html" data-scroll="true">
+          <a href="" data-scroll="true">
             Why?
           </a>
         </li>
@@ -108,7 +108,7 @@
       <img src="assets/img/rubik_background.jpg"/>
       <div class="container">
         <div class="content">
-          <h5>Documentation</h5>
+          <h5>Why should I do this?</h5>
           <div class="separator-container">
             <div class="separator line-separator">☋</div>
           </div>
@@ -126,37 +126,40 @@
       <div class="container">
         <div class="row">
           <div class="tab-content add-animation" id="animationTest">
-            <h2>Requirements</h2>
-            <h3>Your physical or virtual server:</h3>
+            <h2>What is the value of a MAC Address?</h2>
+            <p>Identifying the value that a particular IT infrastructure component provides to the business is a difficult job, to do it successfully, the process goes like this:
+              <ol>
+                <li>Understand what is valuable to your organization</li>
+                <li>Identify the IT services that enable the above to happen</li>
+                <li>List the specific “entry points” that people use to interact with those services</li>
+                <li>Inventory the IT Infrastructure components that are behind each of those "entry points."</li>
+              </ol>
+            </p>
+            <p>Understanding the "impact" of an event is the same exercise, in reverse.</p>
+            <h2>Industry best-practice</h2>
+            <p>The above list should be your "compass" to navigate through the noise of "best practices," "buzzwords" and vendors pushing solutions you don't need:</p>
             <ul>
-              <li>BASH (3.2+)</li>
-              <li>Git</li>
-              <li>Python (2.7)</li>
-              <li>Docker engine (1.12+)</li>
-              <li>Docker compose (1.9+)</li>
+              <li>Monitoring everything is silly, you should have a pro-active, full-coverage, tailored monitoring to ensure 1. is happening before you waste more time searching for the "best monitoring system."</li>
+              <li>Documenting 1 and the relationship with 2 ("why did we do this?") is the best use of your time, because this is what makes your organization and IT operation unique.</li>
+              <li>Setting yourself to "document everything" is the best way to kill your team's morale, especially if you start from 4 and think you can get all the way up to 1 in this lifetime, unfortunately, that is what many engineers try to do.</li>
+              <li>Inventory usually focuses on 4., don't use inventory tools that can't tell you the relationship of the "thing" to the service they are a dependency for on the layers above (naming conventions won't fix the problem).</li>
+              <li>"Automating everything" is a childish proposition, you should focus on automating the processes that directly impact 1 and 2, and the same goes for "change control."</li>
+              <li>"DevOps", "Agile" and whatever is trending in 10 years are only useful if they move things faster for the services in 2, anything else is just a waste of resources.</li>
             </ul>
-            <h3>Or your container platform</h3>
-            <ul>
-              <li>Whatever you use, as long as it supports version '2.1' for docker-compose or similar</li>
-            </ul>
-            <h2>Installation (everything done by us):</h2>
-            <p>It is highly dependent on your operation, in general, something like this:</p>
-            <ul>
-              <li>Schedule a time to understand your process, tech stack, etc.</li>
-              <li>Agree on a specific first goal (there are many use cases, but we start with things like "lower the NOC response time," "audit open listening sockets" or "find the differences between two datacenters").</li>
-              <li>Prepare docker-engine (e.g., proper storage setup) on your server, test our Docker-compose file on your existing Docker environment or write up a deployment based on your process (CloudFormation, Makefile, anything).</li>
-              <li>Gather read-only credentials, test connectivity</li>
-              <li>Scan some data sources, leave a fully-functional setup working that solves that initial goal (generally takes a couple of hours if you have all routing, provisioning, and credentials ready)</li>
-              <li>Schedule a weekly time to show you how to write reports, a training session with your team, demo to your business team, up to you.</li>
-              <li>After a month of trial and a few calls with our team, we (you and us) decide if we are a good fit and start sending you a monthly invoice, or we just part ways. No obligations. And we helped you solve a problem, for free</li>
-            </ul>
+            <p>InsightNow! Automates steps 2, 3 and 4, in a way where you also know the relationships between 1, 2, 3 and 4, so you can traverse ALL your IT infrastructure in any direction, in under 15 seconds and have these benefits:
+              <ul>
+                <li>You only need to document step 1, the rest is automated (including a Visio-like network diagram that is searchable and up-to-date automatically)</li>
+                <li>No need for inventory systems (InsightNow! gives you an up-to-date inventory of everything you have, from any vendor)</li>
+                <li>Creating a checklist for a maintenance window is as simple as selecting the "thing" thing you are planning to affect, InsightNow! Automatically calculates everything else: Whom to notify, impacted services, dependent infrastructure, engineer owners, etc.</li>
+                <li>Understanding the impact of hundreds of monitoring events from multiple monitoring systems is as easy as understanding one alert. In both cases InsightNow! generates a view of related components, you can understand in 5 seconds if you are dealing with one problem or multiple unrelated problems (automatic problem management, as known by ITIL)</li>
+                <li>Your whole IT infrastructure becomes a database and API, so you can integrate with your own workflows, push and pull data (API, SQL-like interface, triggers, visualization, dashboards), etc.</li>
+              </ul>
+            </p>
+            <p>We remove the most dreadful activities in your IT Operations, save you a lot of time, and give you back a way to think about your IT infrastructure as it relates to the value it provides to your organization.</p>
           </div>
         </div>
       </div>
     </div>
-    <a href="" data-scroll="true" data-id="#projects" class="scroll-arrow scroll-black-arrow hidden-xs hidden-sm">
-      <i class="fa fa-angle-down"></i>
-    </a>
   </div>
 
   <footer class="footer footer-big footer-color-black" id="footerTrigger">
