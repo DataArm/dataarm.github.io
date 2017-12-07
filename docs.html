@@ -103,8 +103,8 @@
 </nav>
 
 <div class="wrapper">
-  <div class="section section-header">
-    <div class="parallax pattern-image filter filter-gradient-5">
+  <div class="section section-header section-first" id="section0">
+    <div class="full-image pattern-image" style="max-height: 400px; overflow: hidden;">
       <img src="assets/img/rubik_background.jpg"/>
       <div class="container">
         <div class="content">
@@ -116,17 +116,25 @@
         </div>
       </div>
     </div>
-    <a href="" data-scroll="true" data-id="#whoWeAre" class="scroll-arrow hidden-xs hidden-sm">
-      <i class="fa fa-angle-down"></i>
-    </a>
   </div>
 
-  <div class="section section-we-are-1" id="whoWeAre">
-    <div class="text-area">
+  <div class="main">
+    <div class="section">
       <div class="container">
         <div class="row">
-          <div class="tab-content add-animation" id="animationTest">
-            <h2>Requirements</h2>
+          <div class="col-md-2">
+            <div class="fixed-section">
+              <ul>
+                <li><a href="#requirements">Requirements</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#overview">Functionality overview</a></li>
+                <li><a href="#database">Database access</a></li>
+                <li><a href="#agent">Agent</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-8 col-md-offset-1">
+            <h2 id="requirements">Requirements</h2>
             <h3>Your physical or virtual server:</h3>
             <ul>
               <li>BASH (3.2+)</li>
@@ -139,7 +147,7 @@
             <ul>
               <li>Whatever you use, as long as it supports version '2.1' for docker-compose or similar</li>
             </ul>
-            <h2>Installation (everything done by us):</h2>
+            <h2 id="installation">Installation (everything done by us):</h2>
             <p>It is highly dependent on your operation, in general, something like this:</p>
             <ul>
               <li>Schedule a time to understand your process, tech stack, etc.</li>
@@ -150,17 +158,127 @@
               <li>Schedule a weekly time to show you how to write reports, a training session with your team, demo to your business team, up to you.</li>
               <li>After a month of trial and a few calls with our team, we (you and us) decide if we are a good fit and start sending you a monthly invoice, or we just part ways. No obligations. And we already helped you to solve one problem, for free</li>
             </ul>
+            <h2 id="database">Database access</h2>
+            <p>You can have console access to the database by going to your dashboard's:</p>
+            <pre>URL/neo4j-browser</pre>
+            <p>Run the following command to start an interactive introduction:</p>
+            <pre>:play intro</pre>
+            <p>Python, .NET, Java and Javascript are supported natively and you can programatically connect to the database and unleash the potential for any integration you can imagine!</p>
+            <p>As an example, let's assume we have some nodes connected like this:</p>
+            <pre>(a:Service)-[r:DEPENDS]->(b:DNS_Label)</pre>
+            <p>And there is an "url" property and a "Do_Not_Monitor" flag on "r"</p>
+            <p>We could filter the data and then do something with the results, like populating our external monitoring SaaS (Site24x7, Uptrends!, etc.), here is how to get started with Python:</p>
+            <pre>
+#!/usr/bin/env python
+
+from neo4j.v1 import GraphDatabase, basic_auth, StatementResult
+
+_db = GraphDatabase.driver(
+    "bolt://{{ master_hostname }}",
+    auth=basic_auth('{{ neo4j_user }}', '{{ neo4j_password }}')
+)
+
+# Session wrapper
+def run_query_get(query):
+    with _db.session() as _sess:
+        return _sess.run(query)
+
+# Main code
+for r in run_query_get('MATCH (a:Service)-[r:DEPENDS]->(:DNS_Label) WHERE NOT EXISTS(a.Do_Not_Monitor) AND r.url =~ "(?s)^http.*" RETURN a.name AS name, r.url AS url'):
+    print "Do something with URL %s and the name of the service %s" % (r['url'], r['name'])
+            </pre>
+            <p>As simple as that! <a href="https://neo4j.com/docs/developer-manual/3.0/cypher/">Here are the full documents about the syntax for queries (called "Cypher")</a>, and <a href="https://neo4j.com/docs/developer-manual/3.0/drivers/driver/">here is the documentation for the driver specific configuration and supported programming languages (we only support the "BOLT" protocol by default)</a> </p>
+            <h2 id="agent">Agent</h2>
+            <p>The agent is a binary executable that creates a JSON output that contains:</p>
+            <ul>
+              <li>Currently logged users</li>
+              <li>Listening network sockets</li>
+              <li>Established network connections</li>
+            </ul>
+            <p>You can download the agent from your dashboard:</p>
+            <pre>curl -O URL/repo/inventory/ARCH/inventory</pre>
+            <p>You can view a "pretty" output of the output by running:</p>
+            <pre>./inVentory | python -m json.tool</pre>
+            <p>And it will look like this (on a Linux machine):</p>
+            <pre>
+  {
+    "established_connections": {
+        "1": {
+            "locPort": "50440",
+            "protocol": "tcp",
+            "remPort": "33211",
+            "remoteAddress": "127.0.0.1",
+            "sourceAddress": "127.0.0.1",
+            "state": "ESTABLISHED"
+        },
+        "2": {
+            "locPort": "36878",
+            "protocol": "tcp",
+            "remPort": "41910",
+            "remoteAddress": "127.0.0.1",
+            "sourceAddress": "127.0.0.1",
+            "state": "ESTABLISHED"
+        },
+        "3": {
+            "locPort": "47490",
+            "protocol": "tcp",
+            "remPort": "61613",
+            "remoteAddress": "10.32.65.100",
+            "sourceAddress": "10.32.254.102",
+            "state": "ESTABLISHED"
+        }
+    },
+    "listening_sockets": {
+        "1": {
+            "locPort": "111",
+            "protocol": "tcp",
+            "sourceAddress": "0.0.0.0",
+            "state": "LISTEN"
+        },
+        "2": {
+            "locPort": "8400",
+            "protocol": "tcp",
+            "sourceAddress": "0.0.0.0",
+            "state": "LISTEN"
+        },
+        "3": {
+            "locPort": "33939",
+            "protocol": "tcp",
+            "sourceAddress": "0.0.0.0",
+            "state": "LISTEN"
+        }
+    },
+    "logged_users": {
+        "1": {
+            "host": "",
+            "line": "pts/1",
+            "login": "Tue 12-05-2017 03:53:34 AM",
+            "user": "iuribe"
+        },
+        "2": {
+            "host": "",
+            "line": "pts/3",
+            "login": "Tue 11-21-2017 11:21:54 PM",
+            "user": "iuribe"
+        }
+    }
+}
+            </pre>
+            <p>Just configure a scheduler to run the binary at regular intervals, and pipe the output into your dashboard's "/api/inventory" entry point.</p>
+            <p>As an example, on Linux:</p>
+            <pre>./inVentory | curl -d @- URL/api/inventory</pre>
+            <p>You can use a different tool to create the data and POST to the same API entry point, the agent is just a facility written in C++ so you don't need to install dependencies if you don't want to</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="section section-we-made-2 section-with-hover" id="projects">
+  <div class="section section-we-made-2 section-with-hover" id="overview">
     <div class="projects">
       <div class="text-area">
         <div class="title add-animation">
-          <h2>Main functionality</h2>
+          <h2>Functionality overview</h2>
           <div class="separator-container">
             <div class="separator line-separator">⌘</div>
           </div>
