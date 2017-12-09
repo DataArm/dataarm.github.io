@@ -191,83 +191,20 @@ for r in run_query_get('MATCH (a:Service)-[r:DEPENDS]->(:DNS_Label) WHERE NOT EX
             <h2 id="agent">Agent</h2>
             <p>The agent is a binary executable that creates a JSON output that contains:</p>
             <ul>
+              <li>Hostname</li>
+              <li>Boot time</li>
               <li>Currently logged users</li>
-              <li>Listening network sockets</li>
-              <li>Established network connections</li>
+              <li>Listening network sockets (and process)</li>
+              <li>Established network connections (and process)</li>
             </ul>
             <p>You can download the agent from your dashboard:</p>
-            <pre>curl -O URL/repo/inventory/ARCH/inventory</pre>
+            <pre>URL/repo/inventory/ARCH/inventory</pre>
             <p>You can view a "pretty" output of the output by running:</p>
-            <pre>./inVentory | python -m json.tool</pre>
-            <p>And it will look like this (on a Linux machine):</p>
-            <pre>
-  {
-    "established_connections": {
-        "1": {
-            "locPort": "50440",
-            "protocol": "tcp",
-            "remPort": "33211",
-            "remoteAddress": "127.0.0.1",
-            "sourceAddress": "127.0.0.1",
-            "state": "ESTABLISHED"
-        },
-        "2": {
-            "locPort": "36878",
-            "protocol": "tcp",
-            "remPort": "41910",
-            "remoteAddress": "127.0.0.1",
-            "sourceAddress": "127.0.0.1",
-            "state": "ESTABLISHED"
-        },
-        "3": {
-            "locPort": "47490",
-            "protocol": "tcp",
-            "remPort": "61613",
-            "remoteAddress": "10.32.65.100",
-            "sourceAddress": "10.32.254.102",
-            "state": "ESTABLISHED"
-        }
-    },
-    "listening_sockets": {
-        "1": {
-            "locPort": "111",
-            "protocol": "tcp",
-            "sourceAddress": "0.0.0.0",
-            "state": "LISTEN"
-        },
-        "2": {
-            "locPort": "8400",
-            "protocol": "tcp",
-            "sourceAddress": "0.0.0.0",
-            "state": "LISTEN"
-        },
-        "3": {
-            "locPort": "33939",
-            "protocol": "tcp",
-            "sourceAddress": "0.0.0.0",
-            "state": "LISTEN"
-        }
-    },
-    "logged_users": {
-        "1": {
-            "host": "",
-            "line": "pts/1",
-            "login": "Tue 12-05-2017 03:53:34 AM",
-            "user": "iuribe"
-        },
-        "2": {
-            "host": "",
-            "line": "pts/3",
-            "login": "Tue 11-21-2017 11:21:54 PM",
-            "user": "iuribe"
-        }
-    }
-}
-            </pre>
-            <p>Just configure a scheduler to run the binary at regular intervals, and pipe the output into your dashboard's "/api/inventory" entry point.</p>
+            <pre>./inventory | python -m json.tool</pre>
+            <p>Just configure a scheduler to run the binary at regular intervals pointing to your dashboard's "/api/inventory" entry point.</p>
             <p>As an example, on Linux:</p>
-            <pre>./inVentory | curl -d @- URL/api/inventory</pre>
-            <p>You can use a different tool to create the data and POST to the same API entry point, the agent is just a facility written in C++ so you don't need to install dependencies if you don't want to</p>
+            <pre>./inVentory --target URL/api/inventory</pre>
+            <p>You can use a different tool to create the data and POST to the same API entry point</p>
           </div>
         </div>
       </div>
