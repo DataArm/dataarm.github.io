@@ -197,8 +197,8 @@ for r in run_query_get('MATCH (a:Service)-[r:DEPENDS]->(:DNS_Label) WHERE NOT EX
               <li>Listening network sockets (and process)</li>
               <li>Established network connections (and process)</li>
             </ul>
-            <p>You can download the agent from your dashboard:</p>
-            <pre>URL/repo/inventory/ARCH/inventory</pre>
+            <p>You can download the agent from your dashboard, e.g. on CentOS7:</p>
+            <pre>curl -O URL/repo/inventory/centos7/inventory && chmod +x ./inventory</pre>
             <p>You can view a "pretty" output of the output by running:</p>
             <pre>./inventory | python -m json.tool</pre>
             <p>Just configure a scheduler to run the binary at regular intervals pointing to your dashboard's "/api/inventory" entry point.</p>
