@@ -160,7 +160,7 @@
             </ul>
             <h2 id="database">Database access</h2>
             <p>You can have console access to the database by going to your dashboard's:</p>
-            <pre>URL/#database</pre>
+            <pre>URL/#graphdb</pre>
             <p>Run the following command to start an interactive introduction:</p>
             <pre>:play intro</pre>
             <p>Python, .NET, Java and Javascript are supported natively and you can programatically connect to the database and unleash the potential for any integration you can imagine!</p>
@@ -171,23 +171,12 @@
             <pre>
 #!/usr/bin/env python
 
-from neo4j.v1 import GraphDatabase, basic_auth, StatementResult
+#[session stuff]
 
-_db = GraphDatabase.driver(
-    "bolt://{hostname}",
-    auth=basic_auth('{user}', '{password}')
-)
-
-# Session wrapper
-def run_query_get(query):
-    with _db.session() as _sess:
-        return _sess.run(query)
-
-# Main code
 for r in run_query_get('MATCH (a:Service)-[r:DEPENDS]->(:DNS_Label) WHERE NOT EXISTS(a.Do_Not_Monitor) AND r.url =~ "(?s)^http.*" RETURN a.name AS name, r.url AS url'):
     print "Do something with URL %s and the name of the service %s" % (r['url'], r['name'])
             </pre>
-            <p>As simple as that! <a href="https://neo4j.com/docs/developer-manual/3.0/cypher/">Here are the full documents about the syntax for queries (called "Cypher")</a>, and <a href="https://neo4j.com/docs/developer-manual/3.0/drivers/driver/">here is the documentation for the driver specific configuration and supported programming languages (we only support the "BOLT" protocol by default)</a> </p>
+            <p>As simple as that!</p>
             <h2 id="agent">Agent</h2>
             <p>The agent is a binary executable that creates a JSON output that contains:</p>
             <ul>
