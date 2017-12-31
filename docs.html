@@ -160,7 +160,7 @@
             </ul>
             <h2 id="database">Database access</h2>
             <p>You can have console access to the database by going to your dashboard's:</p>
-            <pre>URL/neo4j-browser</pre>
+            <pre>URL/#database</pre>
             <p>Run the following command to start an interactive introduction:</p>
             <pre>:play intro</pre>
             <p>Python, .NET, Java and Javascript are supported natively and you can programatically connect to the database and unleash the potential for any integration you can imagine!</p>
@@ -174,8 +174,8 @@
 from neo4j.v1 import GraphDatabase, basic_auth, StatementResult
 
 _db = GraphDatabase.driver(
-    "bolt://{{ master_hostname }}",
-    auth=basic_auth('{{ neo4j_user }}', '{{ neo4j_password }}')
+    "bolt://{hostname}",
+    auth=basic_auth('{user}', '{password}')
 )
 
 # Session wrapper
