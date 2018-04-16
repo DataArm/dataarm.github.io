@@ -390,3 +390,8 @@ footer .copyrights{
     width: 100%;
   }
 }
+
+/*LI cursor*/
+.carousel-indicators li {
+  cursor: pointer;
+}
