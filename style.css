@@ -237,14 +237,14 @@ footer .copyrights{
   }
 }
 
-#data-arm-platform{
-  background: #4b2e8c url('images/bg-data-arm-platform.jpg') no-repeat center center;
+#platform{
+  background: #4b2e8c url('images/bg-platform.jpg') no-repeat center center;
   background-size: cover;
   color: #fff;
   font-weight: 100;
 }
 
-#data-arm-platform .text-wrapper{
+#platform .text-wrapper{
   display: flex;
   align-items: center;
 }
@@ -260,47 +260,47 @@ footer .copyrights{
   border-radius: 50px;
 }
 
-#data-arm-platform h3.section-header{
+#platform h3.section-header{
   color: #fff;
 }
 
-#data-arm-platform h6{
+#platform h6{
   font-size: 24px;
   margin-bottom: 20px;
 }
 
-#data-arm-platform a{
+#platform a{
   font-weight: 300;
   color: #fff !important;
 }
 
 @media (max-width: 991px){
-  #data-arm-platform{
+  #platform{
     text-align: center;
   }
-  #data-arm-platform .text-wrapper{
+  #platform .text-wrapper{
     margin-top: 30px;
     margin-bottom: 30px;
   }
 }
 
 @media (max-width: 767px){
-  #dataarm-advantages{
+  #advantages{
     text-align: center;
   }
 }
 
-#integrations-offered .logo-wrapper{
+#integrations .logo-wrapper{
   background: #fff;
   padding: 20px 50px;
   box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
 }
 
-#integrations-offered a{
+#integrations a{
   text-decoration: none !important;
 }
 
-#integrations-offered .custom-integrations-wrapper{
+#integrations .custom-integrations-wrapper{
   background: #261347;
   color: #fff;
   height: 100%;
@@ -310,19 +310,19 @@ footer .copyrights{
   line-height: 1.2;
 }
 
-#integrations-offered-slider .carousel-indicators li{
+#integrations-slider .carousel-indicators li{
   background: #ccc;
 }
 
-#integrations-offered-slider .carousel-indicators li.active{
+#integrations-slider .carousel-indicators li.active{
   background: #999;
 }
 
-#integrations-offered-slider .carousel-control-prev-icon {
+#integrations-slider .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23999' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
 
-#integrations-offered-slider .carousel-control-next-icon {
+#integrations-slider .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23999' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
