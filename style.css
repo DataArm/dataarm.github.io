@@ -429,7 +429,7 @@ footer .copyrights{
 }
 
 /*Preserve white space*/
-#proc, #question {
+#proc p, #question {
   white-space: pre-wrap;
   font-weight: bold;
 }
