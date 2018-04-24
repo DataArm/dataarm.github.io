@@ -429,7 +429,7 @@ footer .copyrights{
 
 /*Preserve white space*/
 #proc {
-  height: 55px;
+  height: 60px;
 }
 #question {
   height: 110px;
@@ -442,7 +442,7 @@ footer .copyrights{
 }
 @media (max-width: 480px){
   #proc {
-    height: 115px;
+    height: 118px;
   }
   #question {
     height: 144px;
