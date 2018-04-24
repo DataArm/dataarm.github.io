@@ -67,7 +67,12 @@ a, a:hover, a:active{
 .text-fade-controls{
   padding-top: 10px;
 }
-
+@media (min-width: 992px){
+  .text-fade-controls{
+    padding: 0;
+    float: left;
+  }
+}
 .text-fade-controls .fa{
   padding-left: 10px;
   padding-right: 10px;
@@ -223,7 +228,12 @@ footer .copyrights{
 #hero-section .btn{
   margin-top: 20px;
 }
-
+@media (min-width: 992px){
+#hero-section .btn{
+  margin: 0;
+  float: right;
+}
+}
 #hero-section .intro-text{
   display: flex;
   align-items: center;
@@ -280,7 +290,11 @@ footer .copyrights{
   font-size: 24px;
   margin-bottom: 20px;
 }
-
+@media (max-width: 480px){
+  #platform h6 {
+    padding: 0 30px;
+  }
+}
 #platform a{
   font-weight: 300;
   color: #fff !important;
@@ -415,7 +429,7 @@ footer .copyrights{
 }
 
 /*Preserve white space*/
-#proc {
+#proc, #question {
   white-space: pre-wrap;
   font-weight: bold;
 }
