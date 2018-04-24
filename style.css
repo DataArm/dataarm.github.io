@@ -413,3 +413,9 @@ footer .copyrights{
 .carousel-indicators li {
   cursor: pointer;
 }
+
+/*Preserve white space*/
+#proc {
+  white-space: pre-wrap;
+  font-weight: bold;
+}
