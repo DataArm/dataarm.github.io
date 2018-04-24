@@ -47,25 +47,25 @@ var questions = [
 ]
 
 var processes = [
-  'Predicting the impact of a change to services, people or business outcomes.                           ',
-  'Understanding the business and operational impact of a problem and who should fix it.                 ',
-  'Auditing spending by IT function, business unit, vendor, or any other pivot.                          ',
-  'Finding the differences between two data centers (including on-premise and cloud).                    ',
-  'Finding the functional differences between staging and production environments.                       ',
-  'Aggregating and escalating alerts by impact and ownership (not just text-matching).                   ',
-  'Documenting services (including inventory lists and architecture diagrams).                           ',
-  'Training, ownership hand-off, on-boarding and identification of skills by role, function, etc.        ',
-  'Inventory of everything, everywhere (discovery, mapping of key metrics, classification, up-to-date).  ',
-  'Answering, with certainty, if we are vulnerable or exposed to a threat.                               ',
-  'Auditing infrastructure for policy compliance throughout cloud and on-premise environments.           ',
-  'Calculating how hundreds of simultaneous events may be related and general "problem management".      ',
-  'Finding documents, dependencies, stakeholders and recent changes related to subject of interest.      ',
-  'Identifying running processes, exposed services, established connections, listening sockets, etc.     ',
-  'Auditing and measuring monitoring coverage. Even on multiple monitoring systems.                      ',
-  'Auditing and measuring backup, disaster-recovery and documentation coverage.                          ',
-  'Identifying rogue services, changed configurations, extraneous infrastructure.                        ',
-  'Calculating the "footprints" of team members, contractors or users. Auditing on/offboarding processes.',
-  'Finding out what configuration changes are happening, anywhere. And how they impact the business.     '
+  '<p>Predicting the impact of a change to services, people or business outcomes.                           </p>',
+  '<p>Understanding the business and operational impact of a problem and who should fix it.                 </p>',
+  '<p>Auditing spending by IT function, business unit, vendor, or any other pivot.                          </p>',
+  '<p>Finding the differences between two data centers (including on-premise and cloud).                    </p>',
+  '<p>Finding the functional differences between staging and production environments.                       </p>',
+  '<p>Aggregating and escalating alerts by impact and ownership (not just text-matching).                   </p>',
+  '<p>Documenting services (including inventory lists and architecture diagrams).                           </p>',
+  '<p>Training, ownership hand-off, on-boarding and identification of skills by role, function, etc.        </p>',
+  '<p>Inventory of everything, everywhere (discovery, mapping of key metrics, classification, up-to-date).  </p>',
+  '<p>Answering, with certainty, if we are vulnerable or exposed to a threat.                               </p>',
+  '<p>Auditing infrastructure for policy compliance throughout cloud and on-premise environments.           </p>',
+  '<p>Calculating how hundreds of simultaneous events may be related and general "problem management".      </p>',
+  '<p>Finding documents, dependencies, stakeholders and recent changes related to subject of interest.      </p>',
+  '<p>Identifying running processes, exposed services, established connections, listening sockets, etc.     </p>',
+  '<p>Auditing and measuring monitoring coverage. Even on multiple monitoring systems.                      </p>',
+  '<p>Auditing and measuring backup, disaster-recovery and documentation coverage.                          </p>',
+  '<p>Identifying rogue services, changed configurations, extraneous infrastructure.                        </p>',
+  '<p>Calculating the "footprints" of team members, contractors or users. Auditing on/offboarding processes.</p>',
+  '<p>Finding out what configuration changes are happening, anywhere. And how they impact the business.     </p>'
 ]
 
 
@@ -86,7 +86,7 @@ function activateTextFader(node, textArray, displayTime){
 
   changeText();
   $(() => setInterval(changeText, displayTime))
-  
+
 
   function createFadeControls(){
     $(node).after("<div class='text-fade-controls'></div>");
@@ -94,22 +94,22 @@ function activateTextFader(node, textArray, displayTime){
     var controlsContainer = $(node).next();
 
     var backward = document.createElement('i');
-    backward.className = 'fa fa-backward'; 
+    backward.className = 'fa fa-backward';
     controlsContainer.append(backward);
     backward.onclick = backwardClick;
 
     var play = document.createElement('i');
-    play.className = 'fa fa-play hidden'; 
+    play.className = 'fa fa-play hidden';
     controlsContainer.append(play);
     play.onclick = playClick;
-    
+
     var pause = document.createElement('i');
-    pause.className = 'fa fa-pause'; 
+    pause.className = 'fa fa-pause';
     controlsContainer.append(pause);
     pause.onclick = pauseClick;
 
     var forward = document.createElement('i');
-    forward.className = 'fa fa-forward'; 
+    forward.className = 'fa fa-forward';
     controlsContainer.append(forward);
     forward.onclick = forwardClick;
   }
