@@ -432,7 +432,10 @@ footer .copyrights{
   height: 55px;
 }
 #question {
-  height: 110px;
+  height: 115px;
+}
+#question ul {
+  text-align: left;
 }
 #proc p, #question p {
   font-weight: bolder;
