@@ -65,11 +65,10 @@ a, a:hover, a:active{
 }
 
 .text-fade-controls{
-  padding-top: 10px;
+  padding: 0;
 }
 @media (min-width: 992px){
   .text-fade-controls{
-    padding: 0;
     float: left;
   }
 }
@@ -429,7 +428,20 @@ footer .copyrights{
 }
 
 /*Preserve white space*/
-#proc p, #question {
-  white-space: pre-wrap;
-  font-weight: bold;
+#proc {
+  height: 55px;
+}
+#question {
+  height: 110px;
+}
+#proc p, #question p {
+  font-weight: bolder;
+}
+@media (max-width: 480px){
+  #proc {
+    height: 110px;
+  }
+  #question {
+    height: 144px;
+  }
 }
