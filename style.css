@@ -432,7 +432,7 @@ footer .copyrights{
   height: 55px;
 }
 #question {
-  height: 115px;
+  height: 110px;
 }
 #question ul {
   text-align: left;
@@ -442,7 +442,7 @@ footer .copyrights{
 }
 @media (max-width: 480px){
   #proc {
-    height: 110px;
+    height: 115px;
   }
   #question {
     height: 144px;
