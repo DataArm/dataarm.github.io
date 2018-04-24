@@ -64,6 +64,17 @@ a, a:hover, a:active{
   background: #f3f3f3;
 }
 
+.text-fade-controls{
+  padding-top: 10px;
+}
+
+.text-fade-controls .fa{
+  padding-right: 20px;
+}
+
+.text-fade-controls .hidden{
+  display: none;
+}
 
 
 /* HEADER */
