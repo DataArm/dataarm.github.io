@@ -47,25 +47,25 @@ var questions = [
 ]
 
 var processes = [
-  '<p>Predicting the impact of a change to services, people or business outcomes.</p>',
-  '<p>Understanding the business and operational impact of a problem and who should fix it.</p>',
-  '<p>Auditing spending by IT function, business unit, vendor, or any other pivot.</p>',
-  '<p>Finding the differences between two data centers (including on-premise and cloud).</p>',
-  '<p>Finding the functional differences between staging and production environments.</p>',
-  '<p>Aggregating and escalating alerts by impact and ownership (not just text-matching).</p>',
-  '<p>Documenting services (including inventory lists and architecture diagrams).</p>',
-  '<p>Training, ownership hand-off, on-boarding and identification of skills by role, function, etc.</p>',
-  '<p>Inventory of everything, everywhere (discovery, mapping of key metrics, classification, up-to-date).</p>',
-  '<p>Answering, with certainty, if we are vulnerable or exposed to a threat.</p>',
-  '<p>Auditing infrastructure for policy compliance throughout cloud and on-premise environments.</p>',
-  '<p>Calculating how hundreds of simultaneous events may be related and general "problem management".</p>',
-  '<p>Finding documents, dependencies, stakeholders and recent changes related to subject of interest.</p>',
-  '<p>Identifying running processes, exposed services, established connections, listening sockets, etc.</p>',
-  '<p>Auditing and measuring monitoring coverage. Even on multiple monitoring systems.</p>',
-  '<p>Auditing and measuring backup, disaster-recovery and documentation coverage.</p>',
-  '<p>Identifying rogue services, changed configurations, extraneous infrastructure.</p>',
-  '<p>Calculating the "footprints" of team members, contractors or users. Auditing on/offboarding processes.</p>',
-  '<p>Finding out what configuration changes are happening, anywhere. And how they impact the business.</p>'
+  '<p>Predict the impact of a change to services, people or business outcomes</p>',
+  '<p>Understand the business and operational impact of a problem and who should fix it</p>',
+  '<p>Audit spending by IT function, business unit, vendor, or any other pivot</p>',
+  '<p>Find the differences between two data centers (including on-premise and cloud)</p>',
+  '<p>Find the functional differences between staging and production environments</p>',
+  '<p>Aggregate and escalate alerts by impact and ownership (not just text-matching)</p>',
+  '<p>Document services (including inventory lists and architecture diagrams)</p>',
+  '<p>Training, ownership hand-off, on-boarding and identification of skills by role, function, etc</p>',
+  '<p>Inventory of everything, everywhere (discovery, mapping of key metrics, classification, up-to-date)</p>',
+  '<p>Answer with certainty if we are vulnerable or exposed to a threat</p>',
+  '<p>Audit infrastructure for policy compliance throughout cloud and on-premise environments</p>',
+  '<p>Calculate how hundreds of simultaneous events may be inter-related</p>',
+  '<p>Find documents, dependencies, stakeholders and recent changes related to a subject of interest</p>',
+  '<p>Identify running processes, exposed services, established connections, listening sockets, etc</p>',
+  '<p>Audit and measure monitoring coverage. Even on multiple monitoring systems</p>',
+  '<p>Audit and measure backup, disaster-recovery and documentation coverage</p>',
+  '<p>Identify rogue services, changed configurations, extraneous infrastructure</p>',
+  '<p>Determine the "digital traces" of team members, contractors or users for staffing changes.</p>',
+  '<p>Determine what configuration changes are happening, anywhere. And how they impact the business</p>'
 ]
 
 

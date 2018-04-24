@@ -434,7 +434,7 @@ footer .copyrights{
 #question {
   height: 110px;
 }
-#question ul {
+#platform li {
   text-align: left;
 }
 #proc p, #question p {
@@ -446,5 +446,17 @@ footer .copyrights{
   }
   #question {
     height: 144px;
+  }
+}
+
+@media (min-width: 992px){
+  #platform .carousel-inner {
+    height: 370px;
+  }
+}
+
+@media (max-width: 480px){
+  #platform .carousel-inner {
+    height: 610px;
   }
 }
