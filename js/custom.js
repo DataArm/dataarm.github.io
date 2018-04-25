@@ -138,8 +138,8 @@ function activateTextFader(node, textArray, displayTime){
   }
 
   function animateText(){
-    $(node).fadeOut(500, function() {
-      $(this).html(textArray[currentIndex]).fadeIn(500);
+    $(node).animate({opacity: 0}, 500, function() {
+      $(this).html(textArray[currentIndex]).animate({opacity: 1}, 500);
     })
   }
 
@@ -187,8 +187,8 @@ function animateOctopus(){
 
   number = (number< 4) ? number + 1 : 0;
 
-  $('.img-octopus-wrapper').fadeOut(500, function() {
-    $(this).html("<img src='./images/img-octopus-" + number +".png' class='img-octopus img-fluid mx-auto'>").fadeIn(500);
+  $('.img-octopus-wrapper').animate({opacity: 0}, 500, function() {
+    $(this).html("<img src='./images/img-octopus-" + number +".png' class='img-octopus img-fluid mx-auto'>").animate({opacity: 1}, 500);
   })
 
 }
