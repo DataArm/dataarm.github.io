@@ -69,127 +69,126 @@ var processes = [
 ]
 
 
-$(document).ready(function(){
-  activateTextFader('#proc', processes, 9000);
-  activateTextFader('#question', questions, 9000);
+$(document).ready(function() {
+  activateTextFader('#proc', processes, 9000)
+  activateTextFader('#question', questions, 9000)
   $(() => setInterval(animateOctopus, 9000))
-});
+})
 
 
-function activateTextFader(node, textArray, displayTime){
+function activateTextFader(node, textArray, displayTime) {
 
-  var isPaused = false;
-  var currentIndex = 0;
+  var isPaused = false
+  var currentIndex = 0
 
-  textArray = shuffle(textArray);
+  textArray = shuffle(textArray)
 
-  createFadeControls();
+  createFadeControls()
 
-  changeText();
+  changeText()
   $(() => setInterval(changeText, displayTime))
 
 
-  function createFadeControls(){
-    $(node).after("<div class='text-fade-controls'></div>");
+  function createFadeControls() {
+    $(node).after("<div class='text-fade-controls'></div>")
 
-    var controlsContainer = $(node).next();
+    var controlsContainer = $(node).next()
 
-    var backward = document.createElement('i');
-    backward.className = 'fa fa-backward';
-    controlsContainer.append(backward);
-    backward.onclick = backwardClick;
+    var backward = document.createElement('i')
+    backward.className = 'fa fa-backward'
+    controlsContainer.append(backward)
+    backward.onclick = backwardClick
 
-    var play = document.createElement('i');
-    play.className = 'fa fa-play hidden';
-    controlsContainer.append(play);
-    play.onclick = playClick;
+    var play = document.createElement('i')
+    play.className = 'fa fa-play hidden'
+    controlsContainer.append(play)
+    play.onclick = playClick
 
-    var pause = document.createElement('i');
-    pause.className = 'fa fa-pause';
-    controlsContainer.append(pause);
-    pause.onclick = pauseClick;
+    var pause = document.createElement('i')
+    pause.className = 'fa fa-pause'
+    controlsContainer.append(pause)
+    pause.onclick = pauseClick
 
-    var forward = document.createElement('i');
-    forward.className = 'fa fa-forward';
-    controlsContainer.append(forward);
-    forward.onclick = forwardClick;
+    var forward = document.createElement('i')
+    forward.className = 'fa fa-forward'
+    controlsContainer.append(forward)
+    forward.onclick = forwardClick
   }
 
-  function pauseClick(){
-    isPaused = true;
-    $(this).addClass('hidden');
+  function pauseClick() {
+    isPaused = true
+    $(this).addClass('hidden')
     $(this).parent().find('.fa-play').removeClass('hidden')
   }
 
-  function playClick(){
-    isPaused = false;
-    $(this).addClass('hidden');
+  function playClick() {
+    isPaused = false
+    $(this).addClass('hidden')
     $(this).parent().find('.fa-pause').removeClass('hidden')
   }
 
-  function forwardClick(){
-    incrementCurrentIndex();
-    animateText();
+  function forwardClick() {
+    incrementCurrentIndex()
+    animateText()
   }
 
-  function backwardClick(){
-    decrementCurrentIndex();
-    animateText();
+  function backwardClick() {
+    decrementCurrentIndex()
+    animateText()
   }
 
-  function animateText(){
+  function animateText() {
     $(node).animate({opacity: 0}, 500, function() {
-      $(this).html(textArray[currentIndex]).animate({opacity: 1}, 500);
+      $(this).html(textArray[currentIndex]).animate({opacity: 1}, 500)
     })
   }
 
-  function incrementCurrentIndex(){
-    if(currentIndex<textArray.length-1){
-      currentIndex = currentIndex + 1;
+  function incrementCurrentIndex() {
+    if(currentIndex<textArray.length-1) {
+      currentIndex = currentIndex + 1
     }else{
-      currentIndex = 0;
+      currentIndex = 0
     }
   }
 
-  function decrementCurrentIndex(){
-    if(currentIndex>0){
-      currentIndex = currentIndex - 1;
+  function decrementCurrentIndex() {
+    if(currentIndex>0) {
+      currentIndex = currentIndex - 1
     }else{
-      currentIndex = textArray.length-1;
+      currentIndex = textArray.length-1
     }
   }
 
   function changeText() {
-    if(!isPaused){
-      animateText();
-      incrementCurrentIndex();
+    if(!isPaused) {
+      animateText()
+      incrementCurrentIndex()
     }
   }
 
 }
 
 function shuffle(a) {
-  var j, x, i;
+  var j, x, i
   for (i = a.length - 1; i > 0; i--) {
-    j = Math.floor(Math.random() * (i + 1));
-    x = a[i];
-    a[i] = a[j];
-    a[j] = x;
+    j = Math.floor(Math.random() * (i + 1))
+    x = a[i]
+    a[i] = a[j]
+    a[j] = x
   }
-  return a;
+  return a
 }
 
 
-function animateOctopus(){
+function animateOctopus() {
 
-  var src = $('.img-octopus').attr('src');
-  var number = parseInt(src.match(/\d+/)[0]);
+  var src = $('.img-octopus').attr('src')
+  var number = parseInt(src.match(/\d+/)[0])
 
-  number = (number< 4) ? number + 1 : 0;
+  number = (number< 4) ? number + 1 : 0
 
   $('.img-octopus-wrapper').animate({opacity: 0}, 500, function() {
-    $(this).html("<img src='./images/img-octopus-" + number +".png' class='img-octopus img-fluid mx-auto'>").animate({opacity: 1}, 500);
+    $(this).html("<img src='./images/img-octopus-" + number +".png' class='img-octopus img-fluid mx-auto'>").animate({opacity: 1}, 500)
   })
 
 }
-
