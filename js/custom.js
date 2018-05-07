@@ -72,6 +72,7 @@ var processes = [
 $(document).ready(function(){
   activateTextFader('#proc', processes, 9000);
   activateTextFader('#question', questions, 9000);
+  $(() => setInterval(animateOctopus, 9000))
 });
 
 
@@ -137,8 +138,8 @@ function activateTextFader(node, textArray, displayTime){
   }
 
   function animateText(){
-    $(node).fadeOut(500, function() {
-      $(this).html(textArray[currentIndex]).fadeIn(500);
+    $(node).animate({opacity: 0}, 500, function() {
+      $(this).html(textArray[currentIndex]).animate({opacity: 1}, 500);
     })
   }
 
@@ -177,3 +178,18 @@ function shuffle(a) {
   }
   return a;
 }
+
+
+function animateOctopus(){
+
+  var src = $('.img-octopus').attr('src');
+  var number = parseInt(src.match(/\d+/)[0]);
+
+  number = (number< 4) ? number + 1 : 0;
+
+  $('.img-octopus-wrapper').animate({opacity: 0}, 500, function() {
+    $(this).html("<img src='./images/img-octopus-" + number +".png' class='img-octopus img-fluid mx-auto'>").animate({opacity: 1}, 500);
+  })
+
+}
+
