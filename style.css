@@ -319,11 +319,17 @@ footer .copyrights {
 }
 
 #platform .carousel-inner {
-  height: 661px;
+  height: 348px;
 }
 #question {
   font-weight: bolder;
-  height: 72px;
+  height: 60px;
+}
+@media (max-width: 767px) {
+  #question {
+    font-weight: bolder;
+    height: 72px;
+  }
 }
 @media (max-width: 991px) {
   #platform {
@@ -332,10 +338,8 @@ footer .copyrights {
   #platform .text-wrapper {
     margin-top: 30px;
   }
-}
-@media (max-width: 480px) {
   #platform .carousel-inner {
-    height: 612px;
+    height: 660px;
   }
 }
 
