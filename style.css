@@ -285,7 +285,7 @@ footer .copyrights {
 }
 
 #platform {
-  background: #4b2e8c url('images/bg-platform.jpg') no-repeat center center;
+  background: #4b2e8c url('images/bg-platform.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   font-weight: 100;
@@ -318,9 +318,6 @@ footer .copyrights {
   color: #fff !important;
 }
 
-#platform .carousel-inner {
-  height: 348px;
-}
 #question {
   font-weight: bolder;
   height: 60px;
@@ -339,7 +336,17 @@ footer .copyrights {
     margin-top: 30px;
   }
   #platform .carousel-inner {
-    height: 660px;
+    height: 667px;
+  }
+}
+@media (min-width: 992px) {
+  #platform .carousel-inner {
+    height: 366px;
+  }
+}
+@media (min-width: 1200px) {
+  #platform .carousel-inner {
+    height: 348px;
   }
 }
 
@@ -456,7 +463,27 @@ footer .copyrights {
   }
 }
 
+#portfolio {
+  background: #4b2e8c url('images/bg-platform.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  font-weight: 100;
+}
+#portfolio h3.section-header {
+  color: #fff;
+}
+#portfolio a, #portfolio a:hover, #portfolio a:active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
 /*LI cursor*/
 .carousel-indicators li {
   cursor: pointer;
+}
+@media (min-width: 992px) {
+  .carousel-control-next, .carousel-control-prev {
+    width: 7%;
+  }
 }

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>DataArm Portfolio</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="./css/socicon.css">
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+</head>
+
+
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container container-xxl">
+      <a class="navbar-brand" href="#"><img src="images/logo.png" id="logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main-menu">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Back to main page</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <form>
+            <button type="submit" class="btn btn-bb-secondary" formaction="mailto:contact@dataarm.com">Let's talk</button>
+          </form>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<div class="horizontal-section" id="portfolio">
+  <div id="portfolio-slider" class="carousel slide" data-ride="carousel" data-interval="false">
+    <ol class="carousel-indicators">
+      <li data-target="#portfolio-slider" data-slide-to="0" class="active"></li>
+      <li data-target="#portfolio-slider" data-slide-to="1"></li>
+      <li data-target="#portfolio-slider" data-slide-to="2"></li>
+      <li data-target="#portfolio-slider" data-slide-to="3"></li>
+      <li data-target="#portfolio-slider" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <h3 class="section-header">Visualizing impact analysis</h3>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+              <div class='embed-container'><iframe src='https://player.vimeo.com/video/269442564?autoplay=1' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+            </div>
+            <div class="col-lg-5 text-wrapper">
+              <div>
+                <ul>
+                  <li>Multiple monitoring systems send 2,500+ alerts during 5 minutes</li>
+                  <li>Backend server uses a graph database to de-duplicate alerts, analysis impact and produce a single aggregated message for escalation</li>
+                  <li>The resulting impact analysis graph is pushed via web sockets in real-time (efficient bandwidth usage by only sending changes which can scale to hundreds of simultaneously subscribed clients)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container">
+          <h3 class="section-header">Interactive globe/dashboard</h3>
+          <div class="row">
+            <div class="col-lg-7">
+              <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+              <div class='embed-container'><iframe src='https://player.vimeo.com/video/269451057?autoplay=1' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+            </div>
+            <div class="col-lg-5 text-wrapper">
+              <div>
+                <p>The dashboard pulls data from Salesforce and helps to execute tests and understand how failures <a href="https://youtu.be/uqL7TPpd2VQ?t=11m56s">on any of the 1,400+ DNS Top level domains</a> are geographically localized, and which population centres may be impacted the most:</p>
+                <ul>
+                  <li>Monitoring centers (Geolocation data) as green or red dots (real-time test results)</li>
+                  <li>Dark blue circles represent population density (public data)</li>
+                  <li>The darker a country's color is, the more it depends on internet (public data)</li>
+                  <li>Submarine cables hint on internet exchange points (<a href="https://www.telegeography.com/">topography data</a>)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container">
+          <h3 class="section-header">Alerts on external events</h3>
+          <div class="row">
+            <div class="col-lg-7">
+              <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+              <div class='embed-container'><iframe src='https://player.vimeo.com/video/269467983?autoplay=1' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+            </div>
+            <div class="col-lg-5 text-wrapper">
+              <div>
+                <p>Example of integrating an external Publish/Subscribe system (Amazon's AWS SNS/SQS) with an on-premise hosted application.</p>
+                <p>Received events on the backend server are pushed themselves through web sockets into the browser (scales up to hundreds of clients and can be used as a proxy on different campuses).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container">
+          <h3 class="section-header">DNS server oversubscription</h3>
+          <div class="row">
+            <div class="col-lg-7">
+              <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+              <div class='embed-container'><iframe src='https://player.vimeo.com/video/269470431?autoplay=1' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+            </div>
+            <div class="col-lg-5 text-wrapper">
+              <div>
+                <p>For the <a href="https://newgtlds.icann.org/en/about/program">New gTLDs program</a>, this interface took data from Salesforce in a column/row format and from Root DNS public infrastructure (Zone AXFR) into a graph database to be able to show how DNS servers were shared amongst TLDs from the same backend operators.</p>
+                <p>The goal was to visualize the level of "connectedness" of DNS infrastructure and how some legal entities were "outsourcing" the operation to the same providers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container">
+          <h3 class="section-header">Optimal route calculation</h3>
+          <div class="row">
+            <div class="col-lg-7">
+              <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+              <div class='embed-container'><iframe src='https://player.vimeo.com/video/269463749?autoplay=1' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+            </div>
+            <div class="col-lg-5 text-wrapper">
+              <div>
+                <p>The map shows the location of rubbish cans (geolocation API overlayed on Google Maps' data) and uses a graph database to calculate the optimal path for the collection truck to only visit streets with full bins.</p>
+                <p>Path calculation uses proximity to clustered nodes as well as the weight of paths based on predicted traffic.</p>
+                <p>The blockchain is used to calculate wallet balances based on recycling goals.</p>
+                <p>Smart Cities Blockchain Hackathon 2017 in Melbourne, Australia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#portfolio-slider" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#portfolio-slider" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+</div>
+
+
+<footer>
+  <div class="container">
+    <div class="row footer-nav-wrapper">
+      <div class="col-lg-4">
+        <h6>Contact Information</h6>
+        <p>Email: <a href="mailto:contact@dataarm.com">contact@dataarm.com</a></p>
+        <div class="row pt-3">
+          <div class="col-sm-6">
+            <h6>Melbourne</h6>
+            DataArm PTY
+          </div>
+          <div class="col-sm-6">
+            <h6>Los Angeles</h6>
+            DataArm LLC
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6">
+      </div>
+      <div class="col-lg-2 col-md-6">
+      </div>
+      <div class="col-lg-2 col-md-6">
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <ul class="social-icons">
+          <li><a href="https://www.facebook.com/dataarm/" target="_blank"><span class="socicon-facebook"></span></a></li>
+          <li><a href="https://twitter.com/data_arm" target="_blank"><span class="socicon-twitter"></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="copyrights">
+    <div class="container">
+      © 2018 DataArm. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
