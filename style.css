@@ -344,11 +344,6 @@ footer .copyrights {
     height: 366px;
   }
 }
-@media (min-width: 1200px) {
-  #platform .carousel-inner {
-    height: 348px;
-  }
-}
 
 @media (max-width: 767px) {
   #advantages {
